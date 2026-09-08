@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Crear una invitación · Bizarro Pariona</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="personalizar.css">
+  <script src="mensajes.js" defer></script>
+  <script src="personalizar.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a href="./">♡ Bizarro Pariona</a><span class="header-note">UNA CARTA PARA CADA PERSONA</span></header>
+  <main class="editor">
+    <div class="eyebrow">COMPARTE UN MOMENTO ESPECIAL</div>
+    <h1>Una sorpresa <em>a su nombre.</em></h1>
+    <p class="intro">Escribe, elige y comparte. Tu enlace se prepara al instante.</p>
+    <div class="editor-grid">
+      <form id="editor-form" class="editor-card" autocomplete="off">
+        <label for="recipient">1. ¿Para quién es?</label>
+        <input id="recipient" maxlength="80" placeholder="Ej. Carmen, Alexis o Familia Rodríguez">
+        <label for="role">2. Elige su relación contigo</label>
+        <select id="role">
+          <option value="Familia">Familia en general</option>
+          <optgroup label="Familiares"><option>Abuela</option><option>Abuelo</option><option value="Tia">Tía</option><option value="Tio">Tío</option><option>Madrina</option><option>Padrino</option><option>Hermana</option><option>Hermano</option></optgroup>
+          <optgroup label="Amistades"><option>Amiga</option><option>Amigo</option><option value="Amigos">Grupo de amigos</option></optgroup>
+          <option value="persona especial">Otra persona especial</option>
+        </select>
+        <label for="custom-message">3. Tu mensaje especial <span>(opcional)</span></label>
+        <textarea id="custom-message" rows="4" maxlength="240" placeholder="Ej. Carmen, no podemos imaginar una abuela más cariñosa. ¡Te esperamos para esta nueva aventura!" aria-describedby="message-help"></textarea>
+        <p id="message-help" class="field-help">Déjalo vacío para usar el mensaje automático. Hasta 240 caracteres.</p>
+        <button type="reset" class="text-button">Crear otro enlace</button>
+      </form>
+      <section class="editor-card preview" aria-labelledby="preview-title">
+        <p class="letter-label">ASÍ SE PERSONALIZARÁ SU SORPRESA</p>
+        <h2 id="preview-title">Hola, <span id="preview-name">Familia</span> ♡</h2>
+        <p>Tenemos algo muy especial que contarte…</p>
+        <div class="preview-message"><p id="preview-message"></p></div>
+        <p class="field-help">Este mensaje aparecerá durante la historia y en la tarjeta final.</p>
+        <label for="generated-link">Tu enlace listo para compartir</label>
+        <input id="generated-link" readonly aria-describedby="link-help">
+        <p id="link-help" class="field-help">El nombre y el mensaje viajan en este enlace. No escribas datos privados.</p>
+        <div class="editor-actions"><button id="copy-link" type="button" class="primary">Copiar enlace</button><a id="send-link" class="primary" target="_blank" rel="noopener noreferrer">Enviar por WhatsApp ↗</a></div>
+        <a id="test-link" class="text-button" target="_blank" rel="noopener noreferrer">Probar la sorpresa ↗</a>
+        <p id="editor-status" role="status"></p>
+      </section>
+    </div>
+    <p class="editor-note">Puedes crear todos los enlaces que quieras. No se guarda una lista de nombres y cada enlace conserva su propio mensaje.</p>
+    <noscript>Activa JavaScript para generar tus enlaces personalizados.</noscript>
+  </main>
+</body>
+</html>

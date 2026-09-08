@@ -13,23 +13,18 @@ let step = 0;
 let revealed = false;
 let musicUnavailable = false;
 
-function getMensajeParentesco(parentesco, nombre) {
-  const key = parentesco.normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
-  const roles = { abuela: 'ABUELA', abuelo: 'ABUELO', tia: 'TÍA', tio: 'TÍO', madrina: 'MADRINA', padrino: 'PADRINO', hermana: 'HERMANA', hermano: 'HERMANO', amiga: 'AMIGA', amigo: 'AMIGO' };
-  if (!Object.hasOwn(roles, key)) return 'Tenemos una noticia muy especial para compartir contigo.';
-  if (key === 'amiga' || key === 'amigo') return `${nombre}, ¡vas a ser una de las personas favoritas de nuestro bebé!`;
-  return `¡Vas a ser ${roles[key]}! 👶❤️`;
-}
+const mensajePersonalizado = params.get('mensaje')?.trim().slice(0, 240);
+const mensajeFinal = mensajePersonalizado || getMensajeParentesco(parentesco, nombre);
 
 document.querySelectorAll('[data-name]').forEach((element) => { element.textContent = nombre; });
-$('relationship').textContent = getMensajeParentesco(parentesco, nombre);
+$('relationship').textContent = mensajeFinal;
 $('share').href = `https://wa.me/?text=${encodeURIComponent('Hay noticias que cambian la vida ❤️ Acabamos de recibir una muy especial 👶')}`;
 
 // Four short chapters (13 seconds total); skipping cancels the pending chapter.
 const chapters = [
   { symbol: '✧', kicker: 'A veces, lo más extraordinario…', title: 'Hay momentos que cambian nuestra historia…', detail: 'Y este es uno de ellos.', duration: 3200 },
   { symbol: '♡', kicker: 'Tenemos una noticia que nos llena el alma.', title: 'Nuestra familia está creciendo ❤️', detail: 'Y queremos compartir esta alegría contigo.', duration: 3200 },
-  { symbol: '✧', kicker: `${nombre}… Prepárate para una nueva aventura…`, title: getMensajeParentesco(parentesco, nombre), detail: 'Un nuevo capítulo también te espera a ti.', duration: 3800 },
+  { symbol: '✧', kicker: `${nombre}… Prepárate para una nueva aventura…`, title: mensajeFinal, detail: 'Un nuevo capítulo también te espera a ti.', duration: 3800 },
   { symbol: '♡', kicker: 'Todo empieza con algo muy pequeño.', title: 'Un pequeño corazón ya está latiendo…', detail: 'Y ya llena de amor nuestra vida.', duration: 2800 }
 ];
 
