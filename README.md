@@ -4,11 +4,11 @@
 
 Abre [el creador de enlaces](https://stivenrmn99.github.io/baby-bizarro/personalizar.html), escribe el nombre y elige el parentesco, familia o amigos. Puedes escribir un mensaje opcional de hasta 240 caracteres. La vista previa muestra el texto exacto; pulsa **Copiar enlace**, **Enviar por WhatsApp** o **Probar la sorpresa**. Para otro destinatario, pulsa **Crear otro enlace**.
 
-También puedes abrir `personalizar.html` localmente. Los enlaces para compartir apuntan al sitio público; la prueba se abre en los archivos locales. No se almacenan destinatarios. Los mensajes personalizados se incluyen en el parámetro `mensaje` de la URL y se muestran como texto durante la historia y al final. No incluyas datos privados. Esta herramienta es pública y no necesita contraseña.
+También puedes abrir `personalizar.html` localmente. Los enlaces para compartir apuntan al sitio público; la prueba se abre en los archivos locales. No se almacenan destinatarios. Los mensajes personalizados se incluyen en el parámetro `mensaje` de la URL y se muestran como texto en la tarjeta final, después del anuncio principal. No incluyas datos privados. Esta herramienta es pública y no necesita contraseña.
 
 Archivos del editor: `personalizar.html`, `personalizar.css`, `personalizar.js`. La invitación y el editor comparten las plantillas de `mensajes.js`; incluye este archivo al subir el proyecto.
 
-Una carta digital personalizada, con tonos crema y oliva, una historia de 13 segundos y una revelación que queda visible. HTML, CSS y JavaScript puros, sin instalaciones ni compilación.
+Una carta digital personalizada, con tonos crema y oliva, una historia de 10 segundos y una revelación que queda visible. HTML, CSS y JavaScript puros, sin instalaciones ni compilación.
 
 ## Probar localmente
 
@@ -18,7 +18,7 @@ Abre `index.html` con doble clic en un navegador moderno. Para probar la persona
 ?para=Carmen&parentesco=Abuela
 ```
 
-Pulsa **Descubrir nuestra sorpresa**. Los cuatro capítulos avanzan automáticamente; **Saltar** muestra la revelación inmediatamente. **Volver a vivir este momento** regresa a la carta. La música solo se intenta reproducir después del clic inicial. El botón flotante permite pausarla y activarla.
+Pulsa **Descubrir nuestra sorpresa**. Los tres capítulos avanzan automáticamente; **Saltar** muestra la revelación inmediatamente. **Volver a vivir este momento** regresa a la carta. La música solo se intenta reproducir después del clic inicial. El botón flotante permite pausarla y activarla.
 
 ## Archivos
 
@@ -86,7 +86,7 @@ GitHub Pages sirve metadatos Open Graph estáticos: no puede generar una vista p
 
 ## Accesibilidad y privacidad
 
-Botones utilizables con teclado, foco visible, encabezados, avisos de estado y descripción alternativa de la foto. `prefers-reduced-motion` desactiva transiciones, latido y partículas. El confeti se elimina a los 5,6 segundos y los temporizadores se cancelan al saltar o repetir.
+Botones utilizables con teclado, foco visible, encabezados, avisos de estado y descripción alternativa de la foto. `prefers-reduced-motion` desactiva transiciones, latido y partículas. El confeti se elimina a los 5 segundos y los temporizadores se cancelan al saltar o repetir.
 
 No hay cookies, analítica, almacenamiento de nombres ni dependencias externas. Los nombres se insertan con `textContent`, nunca como HTML. El botón de compartir abre WhatsApp solo al pulsarlo. La URL personalizada puede permanecer en el historial del navegador y ser procesada por el hosting; el sitio público y sus archivos no están protegidos por contraseña. No publiques una ecografía con datos identificativos que no quieras hacer públicos.
 

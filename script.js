@@ -20,22 +20,21 @@ document.querySelectorAll('[data-name]').forEach((element) => { element.textCont
 $('relationship').textContent = mensajeFinal;
 $('share').href = `https://wa.me/?text=${encodeURIComponent('Hay noticias que cambian la vida ❤️ Acabamos de recibir una muy especial 👶')}`;
 
-// Four short chapters (13 seconds total); skipping cancels the pending chapter.
+// Build anticipation first; the personal message appears after the announcement.
 const chapters = [
-  { symbol: '✧', kicker: 'A veces, lo más extraordinario…', title: 'Hay momentos que cambian nuestra historia…', detail: 'Y este es uno de ellos.', duration: 3200 },
-  { symbol: '♡', kicker: 'Tenemos una noticia que nos llena el alma.', title: 'Nuestra familia está creciendo ❤️', detail: 'Y queremos compartir esta alegría contigo.', duration: 3200 },
-  { symbol: '✧', kicker: `${nombre}… Prepárate para una nueva aventura…`, title: mensajeFinal, detail: 'Un nuevo capítulo también te espera a ti.', duration: 3800 },
-  { symbol: '♡', kicker: 'Todo empieza con algo muy pequeño.', title: 'Un pequeño corazón ya está latiendo…', detail: 'Y ya llena de amor nuestra vida.', duration: 2800 }
+  { symbol: '✧', kicker: `${nombre}, esta pequeña historia también es para ti.`, title: 'Hay momentos que cambian nuestra historia…', detail: 'Y este es uno de ellos.', duration: 3200 },
+  { symbol: '♡', kicker: 'Hay una alegría que ya no podemos guardar.', title: 'Lo más bonito de nuestra vida está por llegar…', detail: 'Y queríamos que tú lo supieras.', duration: 3200 },
+  { symbol: '♡', kicker: 'Escucha con el corazón…', title: 'Un pequeño corazón ya está latiendo…', detail: 'Y está a punto de cambiarlo todo.', duration: 3600 }
 ];
 
 function showChapter() {
   const chapter = chapters[step];
   $('story-symbol').textContent = chapter.symbol;
-  $('story-symbol').classList.toggle('heartbeat', step === 3);
+  $('story-symbol').classList.toggle('heartbeat', step === chapters.length - 1);
   $('story-kicker').textContent = chapter.kicker;
   $('story-title').textContent = chapter.title;
   $('story-detail').textContent = chapter.detail;
-  $('progress').textContent = `0${step + 1} / 04`;
+  $('progress').textContent = `0${step + 1} / 0${chapters.length}`;
   const content = document.querySelector('.story-content');
   content.classList.remove('enter');
   void content.offsetWidth; // Restart the short fade when a chapter changes.
@@ -48,17 +47,25 @@ function celebrate() {
   $('particles').replaceChildren();
   if (reducedMotion.matches) return;
   const fragment = document.createDocumentFragment();
-  for (let i = 0; i < 34; i += 1) {
+  // Two side bursts: bounded particle count, transform-only motion, no frame loop.
+  for (let i = 0; i < 96; i += 1) {
     const particle = document.createElement('span');
-    particle.className = 'particle';
-    particle.textContent = ['♡', '✧', '·', '▪'][i % 4];
-    particle.style.left = `${Math.random() * 100}%`;
-    particle.style.animationDelay = `${Math.random() * 1.4}s`;
-    particle.style.setProperty('--drift', `${Math.random() * 100 - 50}px`);
+    const direction = i % 2 === 0 ? 1 : -1;
+    const distance = 15 + Math.random() * 65;
+    particle.className = 'burst-particle';
+    particle.textContent = ['♥', '✦', '▪', '●', '▪', '▪'][i % 6];
+    particle.style.left = direction === 1 ? '4%' : '96%';
+    particle.style.setProperty('--x', `${direction * distance}vw`);
+    particle.style.setProperty('--peak-x', `${direction * distance * 0.55}vw`);
+    particle.style.setProperty('--peak-y', `${-30 - Math.random() * 42}vh`);
+    particle.style.setProperty('--turn', `${direction * (180 + Math.random() * 540)}deg`);
+    particle.style.setProperty('--size', `${9 + Math.random() * 10}px`);
+    particle.style.animationDelay = `${Math.random() * 0.3}s`;
+    particle.style.animationDuration = `${3.2 + Math.random() * 1.2}s`;
     fragment.append(particle);
   }
   $('particles').append(fragment);
-  particleTimer = window.setTimeout(() => $('particles').replaceChildren(), 5600);
+  particleTimer = window.setTimeout(() => $('particles').replaceChildren(), 5000);
 }
 
 function reveal() {

@@ -32,3 +32,29 @@ h1, h2, p, .primary { overflow-wrap: anywhere; }
   .music-toggle { right: max(12px, env(safe-area-inset-right)); bottom: max(12px, env(safe-area-inset-bottom)); }
   footer { padding-bottom: max(27px, env(safe-area-inset-bottom)); }
 }
+:root { --confetti-gold: #c7a45c; }
+.burst-particle {
+  position: absolute;
+  top: 78%;
+  font-size: var(--size);
+  line-height: 1;
+  color: var(--confetti-gold);
+  opacity: 0;
+  animation: confetti-burst 4s both;
+}
+.burst-particle:nth-child(3n) { color: #8b9e78; }
+.burst-particle:nth-child(3n + 1) { color: #d5a896; }
+.burst-particle:nth-child(5n) { color: #e0c989; }
+@keyframes confetti-burst {
+  0% { opacity: 0; transform: translate3d(0, 0, 0) rotate(0); animation-timing-function: cubic-bezier(.12,.6,.3,1); }
+  8% { opacity: 1; }
+  42% { opacity: 1; transform: translate3d(var(--peak-x), var(--peak-y), 0) rotate(var(--turn)); animation-timing-function: cubic-bezier(.55,0,.85,.45); }
+  100% { opacity: 0; transform: translate3d(var(--x), 32vh, 0) rotate(900deg); }
+}
+/* The news takes center stage, then the name and the personal keepsake follow. */
+.reveal.enter .baby-name, .reveal.enter .coming { animation: enter .8s .35s both; }
+.reveal.enter .reveal-grid { animation: enter .9s 1.15s both; }
+.reveal.enter .secret { animation: enter .9s 1.65s both; }
+@media (prefers-reduced-motion: reduce) {
+  .burst-particle { display: none; }
+}
