@@ -86,7 +86,7 @@ GitHub Pages sirve metadatos Open Graph estáticos: no puede generar una vista p
 
 ## Accesibilidad y privacidad
 
-Botones utilizables con teclado, foco visible, encabezados, avisos de estado y descripción alternativa de la foto. `prefers-reduced-motion` desactiva transiciones, latido y partículas. El confeti se elimina a los 5 segundos y los temporizadores se cancelan al saltar o repetir.
+Botones utilizables con teclado, foco visible, encabezados, avisos de estado y descripción alternativa de la foto. `prefers-reduced-motion` desactiva transiciones, latido y partículas. El confeti se elimina a los 6,2 segundos y los temporizadores se cancelan al saltar o repetir.
 
 No hay cookies, analítica, almacenamiento de nombres ni dependencias externas. Los nombres se insertan con `textContent`, nunca como HTML. El botón de compartir abre WhatsApp solo al pulsarlo. La URL personalizada puede permanecer en el historial del navegador y ser procesada por el hosting; el sitio público y sus archivos no están protegidos por contraseña. No publiques una ecografía con datos identificativos que no quieras hacer públicos.
 

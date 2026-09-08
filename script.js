@@ -48,7 +48,7 @@ function celebrate() {
   if (reducedMotion.matches) return;
   const fragment = document.createDocumentFragment();
   // Two side bursts: bounded particle count, transform-only motion, no frame loop.
-  for (let i = 0; i < 96; i += 1) {
+  for (let i = 0; i < 150; i += 1) {
     const particle = document.createElement('span');
     const direction = i % 2 === 0 ? 1 : -1;
     const distance = 15 + Math.random() * 65;
@@ -59,13 +59,13 @@ function celebrate() {
     particle.style.setProperty('--peak-x', `${direction * distance * 0.55}vw`);
     particle.style.setProperty('--peak-y', `${-30 - Math.random() * 42}vh`);
     particle.style.setProperty('--turn', `${direction * (180 + Math.random() * 540)}deg`);
-    particle.style.setProperty('--size', `${9 + Math.random() * 10}px`);
-    particle.style.animationDelay = `${Math.random() * 0.3}s`;
-    particle.style.animationDuration = `${3.2 + Math.random() * 1.2}s`;
+    particle.style.setProperty('--size', `${17 + Math.random() * 15}px`);
+    particle.style.animationDelay = `${Math.random() * 0.45}s`;
+    particle.style.animationDuration = `${4.3 + Math.random() * 1.2}s`;
     fragment.append(particle);
   }
   $('particles').append(fragment);
-  particleTimer = window.setTimeout(() => $('particles').replaceChildren(), 5000);
+  particleTimer = window.setTimeout(() => $('particles').replaceChildren(), 6200);
 }
 
 function reveal() {
