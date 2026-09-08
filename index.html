@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hay noticias que merecen contarse con el corazón. Tenemos una pequeña sorpresa para ti.">
+  <meta property="og:title" content="Una pequeña sorpresa, un amor inmenso">
+  <meta property="og:description" content="Tenemos algo muy especial que contarte. Esta carta es para ti.">
+  <meta property="og:type" content="website">
+  <!-- Al añadir preview.jpg, descomenta y sustituye por su URL pública completa.
+  <meta property="og:image" content="https://usuario.github.io/baby/assets/preview.jpg">
+  -->
+  <meta name="theme-color" content="#f6f3eb">
+  <title>Una pequeña sorpresa · Con mucho amor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a href="./" aria-label="Volver al inicio"><span class="brand-mark" aria-hidden="true">♡</span> una pequeña sorpresa</a><span class="header-note">HECHO CON MUCHO AMOR</span></header>
+  <main>
+    <section id="welcome" class="welcome" aria-labelledby="welcome-title">
+      <div class="eyebrow"><span></span> UN NUEVO CAPÍTULO <span></span></div>
+      <h1 id="welcome-title">Las mejores noticias<br>se cuentan con el <em>corazón.</em></h1>
+      <p class="intro">Tenemos algo muy especial que contarte…</p>
+      <div class="letter">
+        <svg class="botanical botanical-left" viewBox="0 0 120 240" fill="none" aria-hidden="true"><path d="M72 234C30 161 87 108 57 12"/><path d="M55 182C4 184 11 143 51 160M54 141C105 131 96 104 58 118M61 95C12 93 19 55 60 73M62 58C102 39 76 17 59 37"/></svg>
+        <svg class="botanical botanical-right" viewBox="0 0 120 240" fill="none" aria-hidden="true"><path d="M72 234C30 161 87 108 57 12"/><path d="M55 182C4 184 11 143 51 160M54 141C105 131 96 104 58 118M61 95C12 93 19 55 60 73M62 58C102 39 76 17 59 37"/></svg>
+        <div class="envelope" aria-hidden="true"><span class="envelope-flap"></span><span class="seal">♡</span></div>
+        <p class="letter-label">UNA CARTA ESPECIAL PARA TI</p>
+        <h2>Hola, <span data-name>Familia</span> <span class="small-heart">♡</span></h2>
+        <p>Hay noticias que cambian la vida…<br>y la nuestra está a punto de cambiar.</p>
+        <button id="discover" class="primary">Descubrir nuestra sorpresa <span aria-hidden="true">↗</span></button>
+        <span class="letter-foot">Un instante para guardar en el corazón.</span>
+      </div>
+      <p class="welcome-foot"><span aria-hidden="true">✧</span> Las cosas más bonitas de la vida no son cosas.</p>
+      <noscript><p>Activa JavaScript para abrir tu carta personalizada y descubrir la sorpresa.</p></noscript>
+    </section>
+
+    <section id="story" class="story" hidden aria-labelledby="story-title">
+      <div class="eyebrow">UNA HISTORIA QUE APENAS COMIENZA</div>
+      <div class="story-content" aria-live="polite" aria-atomic="true"><div id="story-symbol" class="story-symbol" aria-hidden="true">✧</div><p id="story-kicker" class="intro"></p><h2 id="story-title" tabindex="-1"></h2><p id="story-detail"></p></div>
+      <div class="story-controls"><span id="progress" aria-label="Progreso de la historia">01 / 04</span><button id="skip" class="text-button">Saltar <span aria-hidden="true">↗</span></button></div>
+    </section>
+
+    <section id="reveal" class="reveal" hidden aria-labelledby="reveal-title">
+      <div class="eyebrow"><span></span> NUESTRO AMOR SIGUE CRECIENDO <span></span></div>
+      <p class="reveal-prelude">Un pequeño corazón ya está latiendo…</p>
+      <h1 id="reveal-title" tabindex="-1">¡Estamos esperando<br>un <em>bebé!</em></h1>
+      <p class="baby-name">Baby Bizarro</p><p class="coming">PRÓXIMAMENTE <span aria-hidden="true">♡</span></p>
+      <div class="reveal-grid">
+        <figure class="photo-card"><div class="photo-area"><img id="ultrasound" alt="Ecografía de Baby Bizarro" hidden><div id="photo-placeholder"><span aria-hidden="true">♡</span><p>Nuestro pequeño gran amor</p><small>Pronto, su primera fotografía.</small></div></div><figcaption>Tan pequeñito. Tan inmenso lo que sentimos.</figcaption></figure>
+        <div class="message-card"><p class="letter-label">Y TÚ FORMAS PARTE DE ESTA HISTORIA</p><h2><span data-name>Familia</span>…</h2><p>Prepárate para una nueva aventura…</p><p id="relationship" class="relationship"></p><div class="divider"></div><p>Ya hay una pequeña personita creciendo con mucho amor.</p><p>Y queríamos que tú fueras parte de este momento tan especial.</p></div>
+      </div>
+      <div class="secret"><span aria-hidden="true">♡</span><h2>Por ahora es nuestro pequeño secreto.</h2><p>Gracias por compartir esta alegría con nosotros. ❤️</p></div>
+      <a id="share" class="primary" target="_blank" rel="noopener noreferrer">Compartir nuestra alegría <span aria-hidden="true">♡</span></a>
+      <p class="share-note">Comparte la emoción, guarda la sorpresa.</p>
+      <button id="replay" class="text-button replay">Volver a vivir este momento <span aria-hidden="true">↺</span></button>
+    </section>
+  </main>
+  <footer>UNA PEQUEÑA SORPRESA <span aria-hidden="true">♡</span> UN AMOR INMENSO</footer>
+  <button id="music-toggle" class="music-toggle" aria-label="Activar música" aria-pressed="false" title="Activar música" hidden><span aria-hidden="true">♫</span></button>
+  <p id="music-status" class="music-status" role="status"></p>
+  <audio id="music" loop preload="none"></audio>
+  <div id="particles" class="particles" aria-hidden="true"></div>
+</body>
+</html>
