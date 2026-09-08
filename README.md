@@ -1,4 +1,4 @@
-# Una pequeña sorpresa · Baby Bizarro
+# Una pequeña sorpresa · Bizarro Pariona
 
 Una carta digital personalizada, con tonos crema y oliva, una historia de 13 segundos y una revelación que queda visible. HTML, CSS y JavaScript puros, sin instalaciones ni compilación.
 
@@ -64,7 +64,7 @@ console.log(enlace.href);
 ## Personalización
 
 - **Mensajes:** edita la carta y el cierre en `index.html`; los capítulos y tiempos (`duration`, en milisegundos) están en `chapters` dentro de `script.js`. Los mensajes familiares están en `getMensajeParentesco`.
-- **Nombre del bebé:** cambia `Baby Bizarro` y el texto alternativo de la fotografía en `index.html`.
+- **Nombre del bebé:** cambia `Bizarro Pariona` y el texto alternativo de la fotografía en `index.html`.
 - **Colores:** modifica las variables al principio de `style.css`, especialmente `--paper`, `--ink` y `--olive`.
 - **Foto:** coloca tu JPG en `assets/ecografia.jpg`, respetando minúsculas. La imagen se muestra completa, sin recorte. Ajusta el `alt` para describirla si la cambias.
 - **Música:** coloca un MP3 que puedas compartir en `assets/musica.mp3`. El volumen inicial es `0.35` en `script.js`; se repite mientras esté activada.
