@@ -32,7 +32,7 @@ assets/
   .gitkeep
 ```
 
-Añade opcionalmente `assets/ecografia.jpg`, `assets/musica.mp3` y `assets/preview.jpg`. No se incluyen fotos ni audio ficticios o archivos binarios vacíos. `.gitkeep` conserva la carpeta en Git. Sin foto se muestra una tarjeta decorativa; sin audio, la historia continúa y aparece un aviso breve.
+Añade opcionalmente `assets/ECO.png`, `assets/musica.mp3` y `assets/preview.jpg`. No se incluyen fotos ni audio ficticios o archivos binarios vacíos. `.gitkeep` conserva la carpeta en Git. Sin foto se muestra una tarjeta decorativa; sin audio, la historia continúa y aparece un aviso breve.
 
 ## Publicar gratis en GitHub Pages
 
@@ -74,7 +74,7 @@ console.log(enlace.href);
 - **Mensajes:** edita la carta y el cierre en `index.html`; los capítulos y tiempos (`duration`, en milisegundos) están en `chapters` dentro de `script.js`. Los mensajes familiares están en `getMensajeParentesco`.
 - **Nombre del bebé:** cambia `Bizarro Pariona` y el texto alternativo de la fotografía en `index.html`.
 - **Colores:** modifica las variables al principio de `style.css`, especialmente `--paper`, `--ink` y `--olive`.
-- **Foto:** coloca tu JPG en `assets/ecografia.jpg`, respetando minúsculas. La imagen se muestra completa, sin recorte. Ajusta el `alt` para describirla si la cambias.
+- **Foto:** coloca tu JPG en `assets/ECO.png`, respetando minúsculas. La imagen se muestra completa, sin recorte. Ajusta el `alt` para describirla si la cambias.
 - **Música:** coloca un MP3 que puedas compartir en `assets/musica.mp3`. El volumen inicial es `0.35` en `script.js`; se repite mientras esté activada.
 - **Texto de WhatsApp:** modifica la frase usada en `encodeURIComponent` en `script.js`. Por defecto no envía nombres, parentescos, fotos ni el enlace personalizado.
 

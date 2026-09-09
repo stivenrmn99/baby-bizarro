@@ -82,9 +82,9 @@ function reveal() {
 
 // Optional media: a missing photo leaves the designed placeholder in place.
 const photo = $('ultrasound');
-photo.addEventListener('load', () => { photo.hidden = false; $('photo-placeholder').hidden = true; });
-photo.addEventListener('error', () => { photo.hidden = true; $('photo-placeholder').hidden = false; });
-photo.src = 'assets/ecografia.jpg';
+photo.addEventListener('load', () => { photo.hidden = false; $('photo-placeholder').hidden = true; photo.parentElement.classList.add('has-photo'); });
+photo.addEventListener('error', () => { photo.hidden = true; $('photo-placeholder').hidden = false; photo.parentElement.classList.remove('has-photo'); });
+photo.src = 'assets/ECO.png';
 
 const music = $('music');
 function updateMusicButton() {
