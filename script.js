@@ -82,9 +82,15 @@ function reveal() {
 
 // Optional media: a missing photo leaves the designed placeholder in place.
 const photo = $('ultrasound');
-photo.addEventListener('load', () => { photo.hidden = false; $('photo-placeholder').hidden = true; photo.parentElement.classList.add('has-photo'); });
-photo.addEventListener('error', () => { photo.hidden = true; $('photo-placeholder').hidden = false; photo.parentElement.classList.remove('has-photo'); });
-photo.src = 'assets/ECO.png';
+function updatePhoto(loaded) {
+  photo.hidden = !loaded;
+  $('photo-placeholder').hidden = loaded;
+  photo.parentElement.classList.toggle('has-photo', loaded);
+}
+photo.addEventListener('load', () => updatePhoto(true));
+photo.addEventListener('error', () => updatePhoto(false));
+// The HTML loads the image directly; also handle a load completed before this script.
+if (photo.complete) updatePhoto(photo.naturalWidth > 0);
 
 const music = $('music');
 function updateMusicButton() {

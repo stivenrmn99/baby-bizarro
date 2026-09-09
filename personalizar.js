@@ -10,6 +10,7 @@ function updateInvitation() {
   // Local editing generates a public, shareable URL, while preview stays local.
   const url = new URL(window.location.protocol === 'file:' ? publicSite : './', window.location.href);
   url.search = new URLSearchParams({ para: name, parentesco: role });
+  url.searchParams.set('v', '20260909-eco2');
   if (message) url.searchParams.set('mensaje', message);
   field('preview-name').textContent = name;
   field('preview-message').textContent = message || getMensajeParentesco(role, name);
