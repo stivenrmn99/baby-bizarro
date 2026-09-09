@@ -1,7 +1,7 @@
 'use strict';
 
 const field = (id) => document.getElementById(id);
-const publicSite = 'https://stivenrmn99.github.io/baby-bizarro/';
+const publicSite = 'https://stivenrmn99.github.io/una-carta/';
 
 function updateInvitation() {
   const name = field('recipient').value.trim() || 'Familia';

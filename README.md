@@ -2,7 +2,7 @@
 
 ## Personalizar sin editar código
 
-Abre [el creador de enlaces](https://stivenrmn99.github.io/baby-bizarro/personalizar.html), escribe el nombre y elige el parentesco, familia o amigos. Puedes escribir un mensaje opcional de hasta 240 caracteres. La vista previa muestra el texto exacto; pulsa **Copiar enlace**, **Enviar por WhatsApp** o **Probar la sorpresa**. Para otro destinatario, pulsa **Crear otro enlace**.
+Abre [el creador de enlaces](https://stivenrmn99.github.io/una-carta/personalizar.html), escribe el nombre y elige el parentesco, familia o amigos. Puedes escribir un mensaje opcional de hasta 240 caracteres. La vista previa muestra el texto exacto; pulsa **Copiar enlace**, **Enviar por WhatsApp** o **Probar la sorpresa**. Para otro destinatario, pulsa **Crear otro enlace**.
 
 También puedes abrir `personalizar.html` localmente. Los enlaces para compartir apuntan al sitio público; la prueba se abre en los archivos locales. No se almacenan destinatarios. Los mensajes personalizados se incluyen en el parámetro `mensaje` de la URL y se muestran como texto en la tarjeta final, después del anuncio principal. No incluyas datos privados. Esta herramienta es pública y no necesita contraseña.
 
